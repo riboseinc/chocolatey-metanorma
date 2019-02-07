@@ -14,7 +14,9 @@ Copy-Item -Force $XsltDist\bin\libexslt-*.dll $XsltDist\bin\libexslt.dll
 
 & npm i -g puppeteer
 
-Get-ToolsLocation
+& cinst msys2 --params "/NoUpdate" -y
+& refreshenv
+
 $RubyGem = "$Env:ChocolateyToolsLocation\ruby25\bin"
 
 & $RubyGem\gem.cmd -v
